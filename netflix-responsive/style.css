@@ -1,0 +1,637 @@
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Fraunces", serif;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+  /* primary color */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: #000000;
+  --clr-grayLine: #222222;
+  --clr-grayText: #5a5a5a;
+  --clr-red: #e50913;
+
+  --fs-h1: 2rem;
+  --fs-p: 1.225rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.8em;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.grayline {
+  width: 100%;
+  height: 0.4em;
+  background-color: var(--clr-grayLine);
+}
+
+section {
+  padding: 3em 0;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .grayline {
+    height: 0.6rem;
+  }
+
+  section {
+    padding: 4em 9em;
+    /* border: 1px solid red; */
+  }
+}
+
+/* ! Mobile First Approach */
+/* ! Header starts here */
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/netflix-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10px 8%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.logo {
+  width: 150px;
+  cursor: pointer;
+}
+
+/* nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+} */
+
+.sign-in-btn {
+  background-color: var(--clr-red);
+  color: var(--clr-white);
+  border: none;
+  text-decoration: none;
+  padding: 0.35em 1em;
+  font-size: 0.94rem;
+  border-radius: 4.5px;
+}
+
+.language-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+}
+
+.language-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+.header-hero {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 100px;
+}
+
+.header-hero h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 700;
+  max-width: 650px;
+}
+
+.header-hero h3 {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+.email-signup {
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.email-signup input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+}
+
+.email-signup button {
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 15px 30px;
+}
+@media only screen and (max-width: 800px) {
+  .logo {
+    width: 100px;
+  }
+  nav button {
+    padding: 5px 10x;
+  }
+  nav .language-btn {
+    padding: 4px 8px;
+  }
+  .header-content {
+    position: unset;
+    transform: none;
+    padding-top: 150px;
+  }
+  .header-content h1 {
+    font-size: 30px;
+  }
+  .email-signup button {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+}
+
+/* ! Header ends here */
+
+/* ! enjoy your tv section stats */
+
+.animation-card-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.our-story-card-text {
+  text-align: center;
+}
+
+.our-story-card-animation-container {
+  position: relative;
+  max-width: 560px;
+  /* border: 3px solid red; */
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.our-story-card-video-wrapper {
+  position: absolute;
+  top: 22.5%;
+  right: 15.5%;
+  width: 69%;
+  z-index: -3;
+}
+
+@media screen and (min-width: 800px) {
+  .animation-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .our-story-card-text {
+    max-width: 90%;
+  }
+
+  .our-story-card-text {
+    text-align: start;
+  }
+}
+/* ! enjoy your tv section ends */
+
+/* ! download shows section starts */
+.download-shows {
+  display: grid;
+  grid-template-areas:
+    "one"
+    "two";
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.download-show-text {
+  grid-area: one;
+}
+
+.download-show-animation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  /* max-width: 300px; */
+  grid-area: two;
+}
+
+.dowload-show-animation-container {
+  display: flex;
+  gap: 0.3em;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  text-align: start;
+  background-color: #000000;
+  bottom: 7%;
+  left: 8%;
+  width: 80%;
+  min-width: 236px;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  border: 2.5px solid var(--clr-grayLine);
+}
+
+.boxshot-img {
+  max-width: 2.2em;
+}
+
+.download-show-animation-text p:first-child {
+  font-size: 1rem;
+}
+
+.downloading-text {
+  color: #004d9f;
+  font-size: 0.7rem;
+  /* text-align: start; */
+}
+
+@media screen and (min-width: 830px) {
+  .download-shows {
+    grid-template-areas: "two two one";
+    align-items: center;
+  }
+
+  .download-show-text {
+    max-width: 80%;
+    text-align: start;
+  }
+
+  .download-show-text {
+    max-width: 80%;
+    /* font-size: 0.6rem; */
+  }
+
+  .dowload-show-animation-container {
+    bottom: 7%;
+    left: 22%;
+    width: 55%;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    border: 2.5px solid var(--clr-grayLine);
+  }
+
+  .boxshot-img {
+    max-width: 3.5em;
+  }
+
+  .download-show-animation-text p:first-child {
+    font-size: 1rem;
+  }
+}
+
+/* ! download shows section ends */
+
+/* ! watch everywhere starts */
+.four {
+  border-top: 6px solid #333;
+  background: black;
+  /* padding-top: 1em; */
+}
+
+.head-four {
+  font-size: 2em;
+}
+
+.line-four {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 3em;
+}
+
+.text-four {
+  font-size: 1.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 22px;
+}
+
+.five {
+  border-top: 6px solid #333;
+  background: black;
+  /* padding-top: 1em; */
+}
+
+.line-five {
+  display: grid;
+  grid-template-areas:
+    "first"
+    "second";
+}
+
+.line-five .line-five-head {
+  text-align: center;
+  grid-area: first;
+  color: #fff;
+}
+
+.img-head-five {
+  grid-area: second;
+}
+
+.head-three {
+  font-size: 1.8em;
+}
+
+.text-three {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 20px;
+}
+
+.image-five {
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .four {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .line-four {
+    text-align: left;
+  }
+
+  .head-four {
+    padding-left: 2.2em;
+    font-size: 3em;
+  }
+
+  .text-four {
+    padding-left: 4.2em;
+    font-size: 1.6em;
+    line-height: 36px;
+  }
+
+  .line-five {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-areas: "second first";
+  }
+
+  .head-three {
+    font-size: 3em;
+  }
+
+  .text-three {
+    font-size: 24px;
+  }
+
+  .line-five-head {
+    width: 80%;
+    padding-left: 3em;
+  }
+
+  .img-head-five {
+    width: 100%;
+  }
+
+  .image-five {
+    width: 100%;
+  }
+}
+/* ! kids profile ends */
+
+/* ! faq starts here */
+
+.faq {
+  display: grid;
+  text-align: center;
+  font-size: 18px;
+}
+.faq h2 {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.accordion {
+  margin: 60px auto;
+  width: 95%;
+  /* border: 1px solid red; */
+}
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label:after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+input[type="radio"] {
+  display: none;
+}
+.accordion .content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+.faq .email-signup {
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+
+.faq small {
+  font-size: 13px;
+}
+
+.faq label {
+  font-size: 1.25rem;
+}
+
+.footer {
+  padding: 50px 15% 10px;
+  border-top: 6px solid #333;
+  color: #777;
+}
+.footer h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.footer .col a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer .row {
+  display: flex;
+
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.footer .language-btn {
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.copyright {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+  nav button {
+    padding: 5px 10x;
+  }
+  nav .language-btn {
+    padding: 4px 8px;
+  }
+  .header-content {
+    position: unset;
+    transform: none;
+    padding-top: 150px;
+  }
+  .header-content h1 {
+    font-size: 30px;
+  }
+  .email-signup button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .text-col,
+  .img-col {
+    flex-basis: 100%;
+  }
+  .features h2 {
+    font-size: 30px;
+  }
+  .features p {
+    font-size: 15px;
+  }
+
+  .row:nth-child(2),
+  .row:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+  .features .row {
+    padding: 10px 0;
+  }
+
+  .faq h2 {
+    font-size: 20px;
+  }
+  .accordion .content {
+    font-size: 14px;
+  }
+  .accordion li label {
+    padding: 10px;
+    font-size: 14px;
+  }
+  label::after {
+    font-size: 22px;
+  }
+}
+
+/* ! faq ends here */

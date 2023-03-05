@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      type="image/png/svg"
+      sizes="32x32"
+      href="./assets/netflix.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>codeNest Netflix Clone</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <nav>
+          <img src="./assets/logo.png" class="logo" />
+          <div>
+            <!--<button class="language-btn">English<img src="images/icon.png"></button>--->
+            <a href="#" class="sign-in-btn">Sign In</a>
+          </div>
+        </nav>
+        <div class="header-hero">
+          <h1>Unlimited movies,TV shows and more.</h1>
+          <h3>Watch anywhere. Cancel anytime</h3>
+          <p>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+          <form class="email-signup">
+            <input type="email" placeholder="Email address" required />
+            <button type="submit">Get Started</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main class="body">
+      <div class="grayline"></div>
+      <section class="animation-card-container">
+        <div class="our-story-card-text">
+          <h1
+            id=""
+            class="our-story-card-title"
+            data-uia="animation-card-title"
+          >
+            Enjoy on your TV.
+          </h1>
+          <p
+            id=""
+            class="our-story-card-subtitle"
+            data-uia="our-story-card-subtitle"
+          >
+            Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+            players, and more.
+          </p>
+        </div>
+        <div class="our-story-card-animation-container">
+          <div class="our-story-card-image-wrapper">
+            <img
+              alt=""
+              class="our-story-card-image"
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+            />
+          </div>
+          <div class="our-story-card-video-wrapper">
+            <video
+              class="our-story-card-video"
+              autoplay=""
+              playsinline=""
+              muted=""
+              loop=""
+            >
+              <source
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <div class="grayline"></div>
+      <section class="download-shows">
+        <div class="download-show-text">
+          <h1>Download your shows to watch offline.</h1>
+          <p>Save your favorites easily and always have something to watch.</p>
+        </div>
+        <div class="download-show-animation">
+          <img src="./assets/netflix-mobile-0819.jpg" alt="neflix mobile" />
+          <div class="dowload-show-animation-container">
+            <img
+              src="./assets/netflix-strangthings-boxshot.png"
+              alt="boxshot"
+              class="boxshot-img"
+            />
+
+            <div class="download-show-animation-text">
+              <p>Sranger Things</p>
+              <p class="downloading-text">Downloading...</p>
+            </div>
+
+            <img
+              src="./assets/netflix-download-icon.gif"
+              alt="download icon"
+              class="boxshot-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="grayline"></div> -->
+      <section class="four">
+        <div class="line-four">
+          <h1 class="head-four">Watch everywhere.</h1>
+          <p class="text-four">
+            Stream unlimited movies and TV shows on your phone, tablet, laptop,
+            and TV.
+          </p>
+        </div>
+      </section>
+
+      <!-- <div class="grayline"></div> -->
+      <section class="five">
+        <div class="line-five" id="five">
+          <div class="line-five-head">
+            <h1 class="head-three">Create profiles for kids</h1>
+            <p class="text-three">
+              Send kids on adventures with their favorite characters in a space
+              made just for them—free with your membership.
+            </p>
+          </div>
+          <div class="img-head-five">
+            <img src="./assets/netflix-kids.png" alt="" class="image-five" />
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="grayline"></div> -->
+      <section class="faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="accordion">
+          <li>
+            <input type="radio" name="accordion" id="first" />
+            <label for="first"><p>What is Netflix?</p></label>
+            <div class="content">
+              <p>
+                This is a great video and streaming website with wonderful
+                options to choose what you want to watch from different
+                countries. Enjoy viewing. Best in video streaming
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="second" />
+            <label for="second"><p>How much does Netflix cost?</p></label>
+            <div class="content">
+              <p>
+                This is a great video and streaming website with wonderful
+                options to choose what you want to watch from different
+                countries. Enjoy viewing. Best in video streaming
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="third" />
+            <label for="third"><p>Where can I Watch?</p></label>
+            <div class="content">
+              <p>
+                This is a great video and streaming website with wonderful
+                options to choose what you want to watch from different
+                countries. Enjoy viewing. Best in video streaming
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="fourth" />
+            <label for="fourth"><p>How do I cancel?</p></label>
+            <div class="content">
+              <p>
+                This is a great video and streaming website with wonderful
+                options to choose what you want to watch from different
+                countries. Enjoy viewing. Best in video streaming
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="fifth" />
+            <label for="fifth"><p>What can I watch on Netflix?</p></label>
+            <div class="content">
+              <p>
+                This is a great video and streaming website with wonderful
+                options to choose what you want to watch from different
+                countries. Enjoy viewing. Best in video streaming
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="sixth" />
+            <label for="sixth"><p>Is Netflix good for kids?</p></label>
+            <div class="content">
+              <p>
+                This is a great video and streaming website with wonderful
+                options to choose what you want to watch from different
+                countries. Enjoy viewing. Best in video streaming
+              </p>
+            </div>
+          </li>
+        </div>
+        <small
+          >Enter your email to create and start your experience in video
+          streaming</small
+        >
+
+        <form class="email-signup">
+          <input type="email" placeholder="Email address" required />
+          <button type="submit">Get Started</button>
+        </form>
+      </section>
+      <!-- <div class="grayline"></div> -->
+    </main>
+
+    <footer class="footer">
+      <h2>Questions? Contact Us</h2>
+
+      <div class="row">
+        <div class="col">
+          <a href="#">FAQ</a>
+          <a href="#">Investors Relations</a>
+          <a href="#">Privacy</a>
+          <a href="#">Speed Test</a>
+        </div>
+        <div class="col">
+          <a href="#">Help Center</a>
+          <a href="#">Jobs</a>
+          <a href="#">cookies Preferences</a>
+          <a href="#">Legal Notices</a>
+        </div>
+        <div class="col">
+          <a href="#">Account</a>
+          <a href="#">Ways to watch</a>
+          <a href="#">Corporate Information</a>
+          <a href="#">Only on Netflix</a>
+        </div>
+        <div class="col">
+          <a href="#">Media Centre</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      <button class="language-btn">
+        English<img src="./assets/down-icon.png" />
+      </button>
+      <p class="copyright">Netflix Nigeria</p>
+    </footer>
+  </body>
+</html>
